@@ -10,6 +10,6 @@ const routes = [
 ];
 
 export const router = createRouter({
-    history: createWebHistory('app-vue-proyecto'),
+    history: createWebHistory('/app-vue-proyecto/'),
     routes,
 })
