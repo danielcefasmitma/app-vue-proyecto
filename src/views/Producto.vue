@@ -26,7 +26,7 @@
             <th>Stock</th>
             <th>Precio</th>
             <th>Imagen</th>
-            <th></th>
+            <th>Acciones</th>
         </thead>
         <tbody>
             <tr v-for="(prod, posicion) in productos">
@@ -53,7 +53,13 @@ import { onMounted, ref } from 'vue';
     const editar = ref(false);
     onMounted(() => {
         //alert("Cargando Producto...")
+        funListar();
     })
+
+    function funListar(){
+        const datos = localStorage.getItem("productos") || "[]";
+        productos.value = JSON.parse(datos);
+    }
 
     function funGuardarProducto(){
         if(editar.value){
@@ -64,7 +70,7 @@ import { onMounted, ref } from 'vue';
             productos.value.push(productoNuevo);
             producto.value = {};
         }
-        
+        localStorage.setItem("productos", JSON.stringify(productos.value))
     }
 
     function funEditar(prod){
