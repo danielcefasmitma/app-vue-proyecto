@@ -22,11 +22,13 @@
 
     <table border="1">
         <thead>
-            <th>Nombre</th>
-            <th>Stock</th>
-            <th>Precio</th>
-            <th>Imagen</th>
-            <th>Acciones</th>
+            <tr>
+                <th>Nombre</th>
+                <th>Stock</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+            </tr>
         </thead>
         <tbody>
             <tr v-for="(prod, posicion) in productos">
