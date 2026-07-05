@@ -159,7 +159,7 @@ import { onMounted, ref } from 'vue';
     })
 
     function funListar(){
-        const datos = localStorage.getItem("productos") || "[]"; 
+        const datos = localStorage.getItem("productos") || "[]";  
         productos.value = JSON.parse(datos); // Convierte la cadena JSON en un array de objetos
     }
 

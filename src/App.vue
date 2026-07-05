@@ -40,6 +40,14 @@ import { RouterLink, RouterView } from 'vue-router';
             </RouterLink>
 
             <RouterLink 
+              to="/carrito" 
+              class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition-colors duration-200"
+              active-class="text-indigo-600 font-bold border-b-2 border-indigo-600 py-5"
+            >
+              Producto (Venta)
+            </RouterLink>
+
+            <RouterLink 
               to="/login" 
               class="ml-4 px-5 py-2 rounded-full text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md hover:shadow transition-all duration-200"
             >
